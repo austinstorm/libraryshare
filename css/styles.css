@@ -1,0 +1,91 @@
+body {
+	background-color: #eee;
+    padding-top: 40px;
+}
+.container {}
+.content {
+	/* negative indent the amount of the padding to maintain the grid system */
+	-moz-border-radius: 0px 0px 6px 6px;
+	-moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, .15);
+	-webkit-border-radius: 0px 0px 6px 6px;
+	-webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, .15);
+	background-color: #fff;
+	border-radius: 0px 0px 6px 6px;
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, .15);
+	margin: 0px -20px;
+	padding: 20px;
+}
+
+/* Main header tweaks */
+.main-header {
+	background-color: #f5f5f5;
+	margin: -20px -20px 20px;
+	padding: 20px 20px 10px;
+}
+.main-header h1,
+.pills {
+	margin-bottom: 0px;
+}
+.main-header h1 {
+	font-family: 'Carter One';
+}
+.main-header h1 small {
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+.breadcrumb {
+	/* margin: -20px 0px 14px; border-top: none; */
+}
+
+/* Footer
+-------------------------------------------------- */
+.footer {
+	/* box-shadow: inset 0px 5px 15px rgba(0, 0, 0, .025); */
+	-moz-box-shadow: inset 0px 5px 15px rgba(0, 0, 0, .025);
+	-webkit-box-shadow: inset 0px 5px 15px rgba(0, 0, 0, .025);
+	background-color: #ccc;
+	border-top: 1px solid #e5e5e5;
+	min-width: 940px;
+	padding: 30px 0px;
+	text-shadow: 0px 1px 0px #ddd;
+}
+.footer p {
+	color: #555;
+}
+
+/* Comments
+--------------------------------------------------- */
+
+.right {
+	text-align: right;
+}
+.left {
+	text-align: left;
+}
+.center {
+	text-align: center;
+}
+.label {
+	vertical-align: middle;
+}
+#activity hr, #comments hr {
+	margin: 10px 0 9px;
+}
+
+.nav img {
+	display: inline-block;
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+	margin-top: -3px;
+	margin-right: 6px;
+	cursor: pointer;
+}
+
+.main-header .breadcrumb {
+	background: none;
+	border: none;
+	box-shadow: none;
+	margin: 1px 0 0 0;
+	padding: 4px 0px;
+}
