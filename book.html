@@ -37,6 +37,7 @@
             <button class="btn" type="submit">Sign in</button>
           </form> -->
 		  <ul class="nav secondary-nav">
+		    <li><a href="admin.html">Admin Tools</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle">
 			  <img src="https://en.gravatar.com/userimage/9838/fb5da3e90c3d9f973a4f55bbd20b0afb.png?s=20">
@@ -74,6 +75,11 @@
 
 	</div>
 
+	<div class="alert-message info">
+        <a class="close" href="#">&times;</a>
+        <p><strong>Heads up!</strong> You have <a href="admin.html#reservations">2 new reservations</a> to be processed.</p>
+      </div>
+	  
 	<div class="row">
 		<div class="span11">
 			<div class="page-header">
@@ -180,11 +186,6 @@ This is not your typical self-help book. This is a book written by artists, for 
 							<strong><a href="user.html" class="url">Austin Storm</a></strong> contributed <a>Art & Fear</a> <span style="color: #aaa;">1 month and 23 minutes ago</span>
 						</div>
 					</div><hr><!-- /row -->
-					<div class="row">
-						<div class="span10 offset1 actions">
-							Comment Form
-						</div>
-					</div><hr><!-- /row -->
 				<div class="pagination"> <ul> <li class="prev"><a href="#">&larr; Previous</a></li> <li class="active"><a href="#">10</a></li> <li><a href="#">11</a></li> <li><a href="#">12</a></li> <li class="disabled"><a href="#">...</a></li> <li><a href="#">19</a></li> <li><a href="#">20</a></li> <li><a href="#">21</a></li> <li class="next"><a href="#">Next &rarr;</a></li> </ul> </div><!-- /pagination -->
 				</div><!-- /tab-pane #activity -->
 				<div class="tab-pane" id="comments">
@@ -221,6 +222,22 @@ This is not your typical self-help book. This is a book written by artists, for 
 							<blockquote><p>I think you should tease that out a bit - tell us a little bit more about the parts you disagreed with. Do you have any alternate suggestions? Etc.</p></blockquote>
 						</div>
 					</div><hr><!-- /row -->
+					<div class="row">
+						<div class="span9 offset1 well">
+							<div class="clearfix">
+								<div class="input">
+								  <textarea class="xlarge span9" id="textarea2" name="textarea2" rows="2"></textarea>
+								  <span class="help-block">
+									Leave a review or a comment on this item.
+								  </span>
+								</div>
+							</div>
+							<div class="clearfix">
+								<a href="#" class="btn primary">Comment</a>
+						    </div>
+						</div>
+					</div><hr><!-- /row -->
+
 				</div>
 				<div class="tab-pane" id="checkouts">
 					<table class="bordered-table zebra-striped">

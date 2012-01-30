@@ -79,86 +79,319 @@
 		
 			<ul class="tabs" data-tabs="tabs">
 				<li class="active"><a href="#circulation">Circulation</a></li>
-				<li><a href="#reservations">Reservations</a></li>
-				<li><a href="#checkedout">Checked Out</a></li>
-				<li><a href="#fines">Fines</a></li>
-				<li><a href="#additem">Add Item</a></li>
-				<li><a href="#invitecodes">Invite Codes</a></li>
+				<li><a href="#reservations">Reservations (3)</a></li>
+				<li><a href="#checkedout">Checked Out (5)</a></li>
+				<li><a href="#fines">Fines (2)</a></li>
+				<li><a href="#invites">Invites (2)</a></li>
+				<li class="dropdown" data-dropdown="dropdown">
+				  <a href="#" class="dropdown-toggle">Add Record</a>
+				  <ul class="dropdown-menu">
+					<li><a href="#addbook">Add Book</a></li>
+					<li><a href="#additem">Add Item</a></li>
+					<li class="divider"></li>
+					<li><a href="#addmember">Add Member</a></li>
+					<li><a href="#invitecodes">Add Invite Codes</a></li>
+				  </ul>
+				</li>
 			</ul>
 			<div id="my-tab-content" class="tab-content">
 				<div class="tab-pane active" id="circulation">
-		<table class="bordered-table zebra-striped">
-		<thead>
-			<tr>
-				<th></th>
-				<th>Title / Year</th>
-				<th>Format / Added</th>
-				<th><img src="http://bibliotik.org/static/icons/comments.png" alt="Comments"></th>
-				<th>Checkouts</th>
-				<th>Contributor</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>
-					<img class="thumbnail" src="http://www.tedorland.com/books/images/art_fear.gif" height="45" alt="">
-				</td>
-				<td><strong><a href="book.html">Art & Fear</a></strong> by <a>David Bayles</a>, <a>Ted Orland</a> (<a>Image Continuum Press</a>, 2004) <br />
-					<span class="label">art</span>
-					<span class="label">process</span>
-					<span class="label">inspiration</span>
-					<span class="label">creativity</span>
-				</td>
-				<td>Paperback, 122 pages<br />23 days, 16 hours ago</td>
-				<td>6</td>
-				<td>5</td>
-				<td><a href="user.html">austinstorm</a></td>
-			</tr>
-			<tr>
-				<td>
-					<img class="thumbnail" src="http://www.tedorland.com/books/images/art_fear.gif" height="45" alt="">
-				</td>
-				<td><strong><a href="book.html">Art & Fear</a></strong> by <a>David Bayles</a>, <a>Ted Orland</a> (<a>Image Continuum Press</a>, 2004) <br />
-					<span class="label">art</span>
-					<span class="label">process</span>
-					<span class="label">inspiration</span>
-					<span class="label">creativity</span>
-				</td>
-				<td>Paperback, 122 pages<br />23 days, 16 hours ago</td>
-				<td>6</td>
-				<td>5</td>
-				<td><a href="user.html">austinstorm</a></td>
-			</tr>
-			<tr>
-				<td>
-					<img class="thumbnail" src="http://www.tedorland.com/books/images/art_fear.gif" height="45" alt="">
-				</td>
-				<td><strong><a href="book.html">Art & Fear</a></strong> by <a>David Bayles</a>, <a>Ted Orland</a> (<a>Image Continuum Press</a>, 2004) <br />
-					<span class="label">art</span>
-					<span class="label">process</span>
-					<span class="label">inspiration</span>
-					<span class="label">creativity</span>
-				</td>
-				<td>Paperback, 122 pages<br />23 days, 16 hours ago</td>
-				<td>6</td>
-				<td>5</td>
-				<td><a href="user.html">austinstorm</a></td>
-			</tr>
-		</tbody>
-	</table>
+					<div class="alert-message error">
+					  <a class="close" href="#">&times;</a>
+					  <p><strong>Oh snap!</strong> Austin Storm has outstanding fines.</p>
+					</div>
+	<div class="row">
+	<div class="span10">
+      <form>
+        <fieldset>
+          <div class="clearfix">
+            <label for="mediumSelect">Choose a Member</label>
+            <div class="input">
+              <input class="large" id="xlInput" name="xlInput" size="30" type="text">
+            </div>
+          </div><!-- /clearfix -->
+          <div class="clearfix">
+		  <label for="input-append">Scan Items</label>
+			<div class="input">
+              <div class="input-append">
+                <input class="small" id="appendedInput" name="appendedInput" size="16" type="text">
+                <label class="add-on">&times;</label>
+              </div>
+            </div>
+          </div><!-- /clearfix -->
+	  <div class="clearfix">
+	    <label>Due Date</label>
+		  <div class="input">
+              <div class="inline-inputs">
+                <input class="small disabled" type="text" value="May 1, 2011" disabled>
+                <input class="mini disabled" type="text" value="12:00am" disabled>
+                to
+                <input class="small disabled" type="text" value="May 8, 2011" disabled>
+                <input class="mini disabled" type="text" value="11:59pm" disabled>
+                <span class="help-block">All times are shown as Pacific Standard Time (GMT -08:00).</span>
+              </div>
+            </div>
+		</div><!-- /clearfix -->
+          <div class="actions">
+            <input type="submit" class="btn primary large" value="Checkout Items">&nbsp;<button type="reset" class="btn">Clear Form</button>
+          </div>
+        </fieldset>
+      </form>
+	  </div><!-- /span10 -->
+	  <div class="span6">
+	  	<h3>Item Circulation</h3>
+		<p>Here's some text on how circulation works. Scan or enter a user, then enter some items.</p>
+	  </div><!-- /span6 -->
+	  </div><!-- /row -->
+	  
 				</div>
 				<div class="tab-pane" id="reservations">
-				Reservations
-				</div>
+					<table class="bordered-table zebra-striped">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>User</th>
+								<th>Item</th>
+								<th>Status</th>
+								<th>Reservation Time</th>
+								<th>Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>2</td>
+								<td><strong><a href="user.html">Austin Storm</a></strong></td>
+								<td>Art & Fear</td>
+								<td class="red">Checked Out</td>
+								<td><span class="red">January 15, 2012</span></td>
+								<td>
+									<a href="#" class="btn small primary disabled">Reserved</a>
+									<a href="#" class="btn small">Cancel</a>
+								</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td><strong>Anonymous</strong></td>
+								<td>Art & Fear</td>
+								<td>On Shelves</td>
+								<td>Now</td>
+								<td>
+									<a href="#" class="btn small primary">Reserved</a>
+									<a href="#" class="btn small">Cancel</a>
+								</td>
+								</tr>
+							<tr>
+								<td>1</td>
+								<td><strong>Anonymous</strong></td>
+								<td>Art & Fear</td>
+								<td>Reserved</td>
+								<td>Now</td>
+								<td>
+									<a href="#" class="btn small primary disabled">Reserved</a>
+									<a href="#" class="btn small">Cancel</a>
+								</td>
+								</tr>
+						</tbody>
+					</table>
+					</div>
 				<!-- #reservations -->
 				<div class="tab-pane" id="checkedout">
-				Check-outs
+					<table class="bordered-table zebra-striped">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>User</th>
+								<th>Item</th>
+								<th>Status</th>
+								<th>Checked Out</th>
+								<th>Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>2</td>
+								<td><strong><a href="user.html">Austin Storm</a></strong></td>
+								<td>Art & Fear</td>
+								<td class="red">Overdue</td>
+								<td><span class="red">23 minutes and 5 seconds ago</span></td>
+								<td>
+									<a href="#" class="btn small primary">Return</a>
+									<a href="#" class="btn small disabled">Renew</a>
+								</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td><strong>Anonymous</strong></td>
+								<td>Art & Fear</td>
+								<td>Checked Out</td>
+								<td>1 month and 23 minutes ago</td>
+								<td>
+									<a href="#" class="btn small primary">Return</a>
+									<a href="#" class="btn small">Renew</a>
+								</td>
+								</tr>
+						</tbody>
+					</table>
 				</div>
 				<!-- #checkedout -->
 				<div class="tab-pane" id="fines">
-				Fines
+					<table class="bordered-table zebra-striped">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>User</th>
+								<th>Item</th>
+								<th>Amount</th>
+								<th>Returned</th>
+								<th>Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>2</td>
+								<td><strong><a href="user.html">Austin Storm</a></strong></td>
+								<td>Art & Fear</td>
+								<td class="red">$3.25</td>
+								<td>23 minutes and 5 seconds ago, 3 days late</td>
+								<td>
+									<a href="#" class="btn small primary">Pay</a>
+									<a href="#" class="btn small">Forgive</a>
+								</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td><strong>Anonymous</strong></td>
+								<td>Art & Fear</td>
+								<td class="red">$3.25</td>
+								<td>1 month and 23 minutes ago, 3 days late</td>
+								<td>
+									<a href="#" class="btn small primary">Pay</a>
+									<a href="#" class="btn small">Forgive</a>
+								</td>
+								</tr>
+						</tbody>
+					</table>
 				</div>
 				<!-- #fines -->
+				<div class="tab-pane" id="invites">
+					<table class="bordered-table zebra-striped">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>User</th>
+								<th>Email</th>
+								<th>Issued</th>
+								<th>Redeemed</th>
+								<th>Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>2</td>
+								<td><strong><a href="user.html">Austin Storm</a></strong></td>
+								<td class="red">joe@gmailsmith.com</td>
+								<td>23 minutes and 5 seconds ago</td>
+								<td>2 minutes and 5 seconds ago</td>
+								<td>
+									<a href="#" class="btn small danger disabled">Revoke</a>
+									<a href="#" class="btn small">Clear</a>
+								</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td><strong><a href="user.html">Austin Storm</a></strong></td>
+								<td class="red">joe@gmailsmith.com</td>
+								<td>23 minutes and 5 seconds ago</td>
+								<td>Never</td>
+								<td>
+									<a href="#" class="btn small danger">Revoke</a>
+									<a href="#" class="btn small">Clear</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- #invites -->
+				<div class="tab-pane" id="addbook">
+				  <form>
+					<fieldset>
+					  <legend>Add a Book</legend>
+					  <div class="clearfix">
+						<label for="xlInput">ISBN</label>
+						<div class="input">
+						  <input class="large" id="xlInput" name="xlInput" size="30" type="text">
+						</div>
+					  </div><!-- /clearfix -->
+					  <div class="clearfix">
+						<label for="xlInput">Author(s)</label>
+						<div class="input">
+						  <input class="xlarge" id="xlInput" name="xlInput" size="30" type="text">
+						  <span class="help-block">Separate several authors with a comma, e.g: Author One, Author von Twoness</span>
+						</div>
+					  </div><!-- /clearfix -->
+					  <div class="clearfix">
+						<label for="xlInput">Title</label>
+						<div class="input">
+						  <input class="xlarge" id="xlInput" name="xlInput" size="30" type="text">
+						</div>
+					  </div><!-- /clearfix -->
+					  <div class="clearfix">
+						<label for="xlInput">Publisher(s)</label>
+						<div class="input">
+						  <input class="xlarge" id="xlInput" name="xlInput" size="30" type="text">
+						  <span class="help-block">Separate several publishers with a comma.</span>
+						</div>
+					  </div><!-- /clearfix -->
+					  <div class="clearfix">
+						<label for="xlInput">Pages</label>
+						<div class="input">
+						  <input class="mini" id="xlInput" name="xlInput" size="30" type="text">
+						</div>
+					  </div><!-- /clearfix -->
+					  <div class="clearfix">
+						<label for="xlInput">Year</label>
+						<div class="input">
+						  <input class="mini" id="xlInput" name="xlInput" size="30" type="text">
+						</div>
+					  </div><!-- /clearfix -->
+					  <div class="clearfix">
+						<label for="xlInput">Format</label>
+						<div class="input">
+						  <select class="medium" name="mediumSelect" id="mediumSelect">
+							<option>Hardback</option>
+							<option>Paperback</option>
+						  </select>
+						</div>
+					  </div><!-- /clearfix -->
+					  <div class="clearfix">
+						<label for="xlInput">Tags</label>
+						<div class="input">
+						  <input class="xlarge" id="xlInput" name="xlInput" size="30" type="text">
+						  <span class="help-block">Separate each tag with a comma, e.g.: nonfiction, engineering</span>
+						</div>
+					  </div><!-- /clearfix -->
+					  <div class="clearfix">
+						<label for="xlInput">Image</label>
+						<div class="input">
+						  <input class="xxlarge" id="xlInput" name="xlInput" size="30" type="text">
+						  <span class="help-block">In full URL form.</span>
+						</div>
+					  </div><!-- /clearfix -->
+					  <div class="clearfix">
+						<label for="xlInput">Description</label>
+						<div class="input">
+						  <textarea class="xxlarge" id="textarea2" name="textarea2" rows="3"></textarea>
+						</div>
+					</div><!-- /clearfix -->
+
+					  <div class="actions">
+						<input type="submit" class="btn primary" value="Add book">&nbsp;<button type="reset" class="btn">Cancel</button>
+					  </div>
+					</fieldset>
+				  </form>
+
+				</div>
+				<!-- #addbook -->
 				<div class="tab-pane" id="additem">
 				Add Item
 				</div>
@@ -225,6 +458,67 @@
 	  </div><!-- /row -->
 			</div>
 				<!-- #invitecodes -->
+				<div class="tab-pane" id="addmember">
+	<div class="row">
+	<div class="span10">
+      <form>
+        <fieldset>
+          <div class="clearfix">
+            <label for="mediumSelect">Add a Member</label>
+            <div class="input">
+              <select class="medium" name="mediumSelect" id="mediumSelect">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+			  <span class="help-inline">Number of Invite Codes to issue per user</span>
+            </div>
+          </div><!-- /clearfix -->
+          <div class="clearfix">
+			<label id="optionsRadio">To users</label>
+			<div class="input">
+              <ul class="inputs-list">
+                <li>
+                  <label>
+                    <input type="radio" checked="" name="optionsRadios" value="option1">
+                    <span>Issue codes to all users above 0 points</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="radio" name="optionsRadios" value="option2">
+                    <span>Issue codes to users who have above 50 points</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="radio" name="optionsRadios" value="option2">
+                    <span>Issue codes to users who have above 100 points</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="radio" name="optionsRadios" value="option2">
+                    <span>Issue codes to users who have above 200 points</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div><!-- /clearfix -->
+          <div class="actions">
+            <input type="submit" class="btn primary" value="Issue invite codes">&nbsp;<button type="reset" class="btn">Cancel</button>
+          </div>
+        </fieldset>
+      </form>
+	  </div><!-- /span10 -->
+	  <div class="span6">
+	  	<h3>What if I just want to invite?</h3>
+		<p>If you want to invite a new member, use the Account Dropdown and click on "My Invites". All admins have unlimited invites. This screen is if you want to add a member manually (if you have a physical library, for instance).</p>
+	  </div><!-- /span6 -->
+	  </div><!-- /row -->
+			</div><!-- #addmember -->
 			</div>
 
 </div>
